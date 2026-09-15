@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyan Academic Competition 2026 — HMSI Telkom University</title>
+  <meta name="description" content="Website Resmi Cyan Academic Competition 2026 diselenggarakan oleh Departemen AKSI HMSI Telkom University bekerjasama dengan EDM Laboratory & EIM Laboratory." />
+  <meta name="keywords" content="Cyan Academic Competition, Machine Learning Solution Challenge, CTF, HMSI Telkom University, Departemen AKSI, EDM Lab, EIM Lab" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&family=Orbitron:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- BUMPER INTRO SPLASH -->
+  <div id="bumper">
+    <canvas id="bumperCanvas"></canvas>
+    <div id="bumperContent">
+      <img src="images/logo-cac.png" alt="Cyan Academic Competition Logo" class="bumper-logo-img" />
+      <div id="bumperBadge">HIMPUNAN MAHASISWA SISTEM INFORMASI · TELKOM UNIVERSITY</div>
+      <h1 id="bumperTitle">CYAN ACADEMIC COMPETITION 2026</h1>
+      <p id="bumperSub">Machine Learning Solution Challenge &amp; Capture The Flag (CTF)</p>
+      <div id="bumperLine"></div>
+    </div>
+  </div>
+
+  <!-- HEADER & NAVBAR RESMI -->
+  <header id="header">
+    <div class="navbar">
+      <a href="#home" class="logo">
+        <img src="images/logo-cac.png" alt="CAC Logo" class="nav-logo-img" />
+        <div class="logo-text">
+          <span class="logo-title">CYAN ACADEMIC COMPETITION <span class="logo-year">2026</span></span>
+          <span class="logo-org">HMSI TELKOM UNIVERSITY</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#timeline">Jadwal</a>
+        <a href="#kategori">Cabang Lomba</a>
+        <a href="#juri">Dewan Juri</a>
+        <a href="#guidebook">Buku Panduan</a>
+        <a href="#sponsor">Kemitraan</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-open-status">
+          <i data-lucide="search" style="width:15px;height:15px;"></i> Cek Status
+        </button>
+        <button class="btn btn-primary btn-open-reg">
+          <i data-lucide="rocket" style="width:15px;height:15px;"></i> Daftar Lomba
+        </button>
+        <button class="theme-toggle" id="themeToggle" title="Toggle Mode">
+          <i data-lucide="sun" class="icon-sun" style="width:16px;height:16px;"></i>
+          <i data-lucide="moon" class="icon-moon" style="width:16px;height:16px;"></i>
+        </button>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-close" id="mobileClose">
+      <i data-lucide="x" style="width:28px;height:28px;"></i>
+    </div>
+    <a href="#home">Beranda</a>
+    <a href="#timeline">Jadwal</a>
+    <a href="#kategori">Cabang Lomba</a>
+    <a href="#juri">Dewan Juri</a>
+    <a href="#guidebook">Buku Panduan</a>
+    <a href="#sponsor">Kemitraan</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontak</a>
+    <button class="btn btn-primary btn-open-reg" style="margin-top:10px;">
+      <i data-lucide="rocket" style="width:18px;height:18px;"></i> Daftar Lomba
+    </button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas"></canvas>
+    <div class="container hero-wrapper">
+      <img src="images/logo-cac.png" alt="Cyan Academic Competition 2026" class="hero-badge-logo" />
+      <div class="hero-eyebrow">
+        <i data-lucide="sparkles" style="width:16px;height:16px;"></i>
+        DEPARTEMEN AKADEMIK, RISET, DAN TEKNOLOGI (AKSI) HMSI
+      </div>
+      <h1 class="hero-title">
+        <span class="title-org">TELKOM UNIVERSITY 2026</span>
+        CYAN ACADEMIC<br>COMPETITION
+      </h1>
+      <p class="hero-subtitle">
+        Ajang Kompetisi Akademik Mahasiswa Perguruan Tinggi se-Bandung Raya hasil kolaborasi <strong>Departemen AKSI HMSI Telkom University</strong> dengan <strong>Enterprise Data Management (EDM) Laboratory</strong> dan <strong>Enterprise Infrastructure Management (EIM) Laboratory</strong>.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg btn-open-reg">
+          <i data-lucide="rocket" style="width:20px;height:20px;"></i> Daftar Sekarang (Gelombang 1)
+        </button>
+        <a href="#guidebook" class="btn btn-outline btn-lg">
+          <i data-lucide="book-open" style="width:20px;height:20px;"></i> Buku Panduan (Guidebook)
+        </a>
+        <button class="btn btn-accent btn-lg btn-open-status">
+          <i data-lucide="ticket" style="width:20px;height:20px;"></i> Cek Status Tim
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="glass-card stat-card">
+          <h3>2</h3>
+          <p>Cabang Lomba Utama</p>
+        </div>
+        <div class="glass-card stat-card">
+          <h3>Mahasiswa</h3>
+          <p>Target Peserta se-Bandung Raya</p>
+        </div>
+        <div class="glass-card stat-card">
+          <h3>2 Lab</h3>
+          <p>EDM Lab &amp; EIM Lab Tel-U</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER STRIP -->
+  <div class="ticker-strip">
+    <div class="ticker-inner">
+      <div class="ticker-item">
+        <span class="ticker-highlight">GELOMBANG 1:</span> 1 – 10 OKTOBER 2026 (Pendaftaran Gelombang 1)
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-highlight">GELOMBANG 2:</span> 11 – 18 OKTOBER 2026 (Pendaftaran Gelombang 2)
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-highlight">CABANG 1:</span> Machine Learning Solution Challenge (EDM Lab)
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-highlight">CABANG 2:</span> Capture The Flag / CTF (EIM Lab)
+      </div>
+      <span class="ticker-sep">✦</span>
+      <div class="ticker-item">
+        <span class="ticker-highlight">PENYELENGGARA:</span> Departemen AKSI HMSI Telkom University
+      </div>
+      <span class="ticker-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- HITUNG MUNDUR PENDAFTARAN -->
+  <section id="countdown">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="clock" style="width:14px;height:14px;"></i> HITUNG MUNDUR PENDAFTARAN GELOMBANG 1
+        </span>
+        <h2 class="section-title">Hitung Mundur Pendaftaran</h2>
+        <p class="section-subtitle">Waktu tersisa menuju penutupan Pendaftaran Gelombang 1 Cyan Academic Competition 2026 (10 Oktober 2026).</p>
+      </div>
+
+      <div class="countdown-grid">
+        <div class="glass-card countdown-box">
+          <span class="countdown-val" id="days">00</span>
+          <span class="countdown-label">Hari</span>
+        </div>
+        <div class="glass-card countdown-box">
+          <span class="countdown-val" id="hours">00</span>
+          <span class="countdown-label">Jam</span>
+        </div>
+        <div class="glass-card countdown-box">
+          <span class="countdown-val" id="minutes">00</span>
+          <span class="countdown-label">Menit</span>
+        </div>
+        <div class="glass-card countdown-box">
+          <span class="countdown-val" id="seconds">00</span>
+          <span class="countdown-label">Detik</span>
+        </div>
+      </div>
+
+      <p class="countdown-footer">
+        Gelombang 1: <span>1 – 10 Oktober 2026</span> · Gelombang 2: <span>11 – 18 Oktober 2026</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- JADWAL PENDAFTARAN (HANYA BATCH 1 & BATCH 2) -->
+  <section id="timeline" style="background:var(--bg-dark-2);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="calendar" style="width:14px;height:14px;"></i> JADWAL PENDAFTARAN RESMI
+        </span>
+        <h2 class="section-title">Jadwal Pendaftaran</h2>
+        <p class="section-subtitle">Pendaftaran dibuka dalam 2 gelombang utama untuk seluruh mahasiswa aktif D3/D4/S1 se-Bandung Raya.</p>
+      </div>
+
+      <div class="timeline-container-simple">
+        <div class="glass-card timeline-box-card">
+          <span class="timeline-box-badge">GELOMBANG 1</span>
+          <h3 class="timeline-box-date">1 – 10 OKTOBER 2026</h3>
+          <p class="timeline-box-desc">Pembukaan pendaftaran resmi gelombang pertama untuk cabang Machine Learning Solution Challenge dan Capture The Flag (CTF).</p>
+        </div>
+
+        <div class="glass-card timeline-box-card">
+          <span class="timeline-box-badge">GELOMBANG 2</span>
+          <h3 class="timeline-box-date">11 – 18 OKTOBER 2026</h3>
+          <p class="timeline-box-desc">Pembukaan pendaftaran resmi gelombang kedua bagi calon tim peserta yang mendaftar pada Batch 2.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CABANG PERLOMBAAN -->
+  <section id="kategori">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="trophy" style="width:14px;height:14px;"></i> CABANG PERLOMBAAN RESMI
+        </span>
+        <h2 class="section-title">Cabang Perlombaan</h2>
+        <p class="section-subtitle">Diselenggarakan oleh Laboratorium Resmi Program Studi S1 Sistem Informasi Telkom University.</p>
+      </div>
+
+      <div class="comp-grid-2">
+        <!-- Branch 1: Machine Learning Solution Challenge -->
+        <div class="glass-card comp-card">
+          <div>
+            <div class="comp-badge-target">
+              <i data-lucide="database" style="width:14px;height:14px;"></i> EDM LABORATORY
+            </div>
+            <div class="comp-icon-box">
+              <i data-lucide="brain-circuit" style="width:34px;height:34px;"></i>
+            </div>
+            <h3 class="comp-title">Machine Learning Solution Challenge</h3>
+            <p class="comp-desc">Kompetisi penyelesaian studi kasus berbasis Machine Learning. Peserta diberikan dataset resmi panitia untuk dianalisis, dibangun model solusi terbaik, dan dipresentasikan di hadapan dewan juri EDM Lab.</p>
+            <div class="comp-details">
+              <div class="comp-detail-item">
+                <span class="comp-detail-label">Penyelenggara</span>
+                <span class="comp-detail-val">Enterprise Data Management (EDM) Lab</span>
+              </div>
+              <div class="comp-detail-item">
+                <span class="comp-detail-label">Target Peserta</span>
+                <span class="comp-detail-val">Mahasiswa D3/D4/S1 Bandung Raya</span>
+              </div>
+              <div class="comp-detail-item">
+                <span class="comp-detail-label">Penghargaan &amp; Hadiah</span>
+                <span class="comp-detail-val">Sertifikat Resmi &amp; Plakat Pemenang</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-open-reg" data-category="Machine Learning Solution Challenge (EDM Lab)">
+            <i data-lucide="send" style="width:16px;height:16px;"></i> Daftar Cabang Ini
+          </button>
+        </div>
+
+        <!-- Branch 2: Capture The Flag (CTF) -->
+        <div class="glass-card comp-card">
+          <div>
+            <div class="comp-badge-target">
+              <i data-lucide="shield" style="width:14px;height:14px;"></i> EIM LABORATORY
+            </div>
+            <div class="comp-icon-box">
+              <i data-lucide="shield-alert" style="width:34px;height:34px;"></i>
+            </div>
+            <h3 class="comp-title">Capture The Flag (CTF)</h3>
+            <p class="comp-desc">Kompetisi di bidang keamanan siber dan infrastruktur sistem. Peserta menyelesaikan berbagai tantangan (challenge) meliputi Kriptografi, Web Security, Forensics, Reverse Engineering, dan System Infra.</p>
+            <div class="comp-details">
+              <div class="comp-detail-item">
+                <span class="comp-detail-label">Penyelenggara</span>
+                <span class="comp-detail-val">Enterprise Infrastructure Mgmt (EIM) Lab</span>
+              </div>
+              <div class="comp-detail-item">
+                <span class="comp-detail-label">Target Peserta</span>
+                <span class="comp-detail-val">Mahasiswa D3/D4/S1 Bandung Raya</span>
+              </div>
+              <div class="comp-detail-item">
+                <span class="comp-detail-label">Penghargaan &amp; Hadiah</span>
+                <span class="comp-detail-val">Sertifikat Resmi &amp; Plakat Pemenang</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-open-reg" data-category="Capture The Flag (EIM Lab)">
+            <i data-lucide="send" style="width:16px;height:16px;"></i> Daftar Cabang Ini
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEWAN JURI (DIGANTI DARI SECTION LAB) -->
+  <section id="juri" style="background:var(--bg-dark-2);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="users" style="width:14px;height:14px;"></i> PENJURIAN &amp; PENILAIAN
+        </span>
+        <h2 class="section-title">Dewan Juri Perlombaan</h2>
+        <p class="section-subtitle">Proses penjurian dilakukan secara profesional oleh akademisi &amp; praktisi ahli laboratorium terkait.</p>
+      </div>
+
+      <div class="juri-grid">
+        <div class="glass-card juri-card">
+          <div class="juri-header-box">
+            <div class="juri-avatar-icon">
+              <i data-lucide="brain-circuit" style="width:28px;height:28px;"></i>
+            </div>
+            <div>
+              <h3 class="juri-title">Dewan Juri Machine Learning</h3>
+              <span class="juri-sub">Enterprise Data Management (EDM) Lab</span>
+            </div>
+          </div>
+          <p class="juri-desc">
+            Dewan juri cabang Machine Learning Solution Challenge terdiri dari dosen pengampu serta praktisi ahli EDM Laboratory Telkom University yang menilai orisinalitas ide, arsitektur model AI/ML, akurasi, dan penyusunan laporan solusi.
+          </p>
+        </div>
+
+        <div class="glass-card juri-card">
+          <div class="juri-header-box">
+            <div class="juri-avatar-icon">
+              <i data-lucide="shield-alert" style="width:28px;height:28px;"></i>
+            </div>
+            <div>
+              <h3 class="juri-title">Dewan Juri Capture The Flag</h3>
+              <span class="juri-sub">Enterprise Infrastructure Management (EIM) Lab</span>
+            </div>
+          </div>
+          <p class="juri-desc">
+            Dewan juri cabang Capture The Flag (CTF) terdiri dari akademisi spesialis infrastruktur jaringan &amp; cybersecurity EIM Laboratory Telkom University yang memverifikasi validitas flag, validitas exploit, dan integritas kompetisi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUKU PANDUAN (GUIDEBOOK) -->
+  <section id="guidebook">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="book" style="width:14px;height:14px;"></i> DOKUMEN PETUNJUK TEKNIS
+        </span>
+        <h2 class="section-title">Buku Panduan (Guidebook)</h2>
+        <p class="section-subtitle">Petunjuk teknis dan aturan lengkap perlombaan akan segera diperbarui oleh Penanggung Jawab (PJ) Lomba.</p>
+      </div>
+
+      <div class="guidebook-stage-wrapper">
+        <button class="book-nav-btn book-nav-prev" id="prevSlide">
+          <i data-lucide="chevron-left" style="width:24px;height:24px;"></i>
+        </button>
+
+        <div class="book-scene">
+          <div class="book-cover">
+            <div class="slide-canvas">
+              <img id="slideImg" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Guidebook Slide" />
+            </div>
+            <div class="docs-stage-overlay">
+              <span class="section-tag" id="slideTag" style="margin-bottom:8px;">PEMBERITAHUAN GUIDEBOOK</span>
+              <h3 class="docs-stage-title" id="slideTitle">Pembaruan Guidebook Cyan Academic Competition 2026</h3>
+              <p class="docs-stage-desc" id="slideDesc">Buku Panduan (Guidebook) resmi terbaru akan segera diunggah oleh Penanggung Jawab (PJ) masing-masing cabang lomba.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="book-nav-btn book-nav-next" id="nextSlide">
+          <i data-lucide="chevron-right" style="width:24px;height:24px;"></i>
+        </button>
+
+        <div class="docs-thumb-strip" id="thumbStrip"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MITRA & SPONSORSHIP (KBVS) -->
+  <section id="sponsor" class="sponsor-section" style="background:var(--bg-dark-2);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="handshake" style="width:14px;height:14px;"></i> DUKUNGAN &amp; KEMITRAAN
+        </span>
+        <h2 class="section-title">Mitra &amp; Sponsorship</h2>
+        <p class="section-subtitle">Cyan Academic Competition 2026 bangga berkolaborasi dengan mitra industri tepercaya.</p>
+      </div>
+
+      <div class="sponsor-grid">
+        <div class="sponsor-box">
+          <img src="images/logo-cac.png" alt="CAC Logo" class="sponsor-img-logo" />
+          <span class="sponsor-label">Penyelenggara Utama</span>
+        </div>
+
+        <div class="sponsor-box">
+          <img src="images/logo-kbvs.png" alt="KB Valbury Sekuritas Logo" class="sponsor-img-logo" />
+          <span class="sponsor-label">Official Partner — KB Valbury Sekuritas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERTANYAAN UMUM (FAQ) -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="help-circle" style="width:14px;height:14px;"></i> PERTANYAAN UMUM
+        </span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Jawaban atas pertanyaan yang sering diajukan mengenai pendaftaran lomba.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Siapa saja yang berhak mendaftar Cyan Academic Competition 2026?</span>
+            <i data-lucide="chevron-down" class="faq-icon" style="width:20px;height:20px;"></i>
+          </div>
+          <div class="faq-answer">
+            Kompetisi ini terbuka untuk seluruh **Mahasiswa aktif jenjang Diploma (D3/D4) maupun Sarjana (S1)** dari perguruan tinggi di wilayah Bandung Raya.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Apa saja cabang lomba yang diselenggarakan?</span>
+            <i data-lucide="chevron-down" class="faq-icon" style="width:20px;height:20px;"></i>
+          </div>
+          <div class="faq-answer">
+            Terdapat 2 cabang lomba utama: **Machine Learning Solution Challenge** (oleh EDM Lab) dan **Capture The Flag / CTF** (oleh EIM Lab).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Kapan periode pendaftaran dibuka?</span>
+            <i data-lucide="chevron-down" class="faq-icon" style="width:20px;height:20px;"></i>
+          </div>
+          <div class="faq-answer">
+            Pendaftaran Gelombang 1 berlangsung pada 1 – 10 Oktober 2026, dilanjutkan Pendaftaran Gelombang 2 pada 11 – 18 Oktober 2026.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Bagaimana cara mengecek status pendaftaran tim saya?</span>
+            <i data-lucide="chevron-down" class="faq-icon" style="width:20px;height:20px;"></i>
+          </div>
+          <div class="faq-answer">
+            Anda dapat mengecek status pendaftaran secara langsung kapan saja dengan menekan tombol "Cek Status" di navigasi atas lalu memasukkan ID Pendaftaran unik Anda.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK & SEKRETARIAT -->
+  <section id="contact" style="background:var(--bg-dark-2);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i data-lucide="phone" style="width:14px;height:14px;"></i> SEKRETARIAT &amp; KONTAK
+        </span>
+        <h2 class="section-title">Kontak Panitia &amp; Lokasi</h2>
+        <p class="section-subtitle">Tim panitia Departemen AKSI siap membantu pertanyaan seputar alur perlombaan.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto;">
+        <div class="glass-card" style="padding:30px;text-align:center;">
+          <div style="width:54px;height:54px;border-radius:50%;background:rgba(0,242,254,0.1);color:var(--primary);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i data-lucide="message-square" style="width:26px;height:26px;"></i>
+          </div>
+          <h4 style="font-size:1.1rem;margin-bottom:6px;">Contact Person</h4>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;">+62 877-2049-9388 (Maya)</p>
+          <a href="https://wa.me/6287720499388" target="_blank" class="btn btn-outline" style="width:100%;">
+            <i data-lucide="send" style="width:14px;height:14px;"></i> Chat WhatsApp
+          </a>
+        </div>
+
+        <div class="glass-card" style="padding:30px;text-align:center;">
+          <div style="width:54px;height:54px;border-radius:50%;background:rgba(0,242,254,0.1);color:var(--primary);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i data-lucide="mail" style="width:26px;height:26px;"></i>
+          </div>
+          <h4 style="font-size:1.1rem;margin-bottom:6px;">Email Resmi</h4>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;">cyancompetition@gmail.com</p>
+          <a href="mailto:cyancompetition@gmail.com" class="btn btn-outline" style="width:100%;">
+            <i data-lucide="mail" style="width:14px;height:14px;"></i> Kirim Email
+          </a>
+        </div>
+
+        <div class="glass-card" style="padding:30px;text-align:center;">
+          <div style="width:54px;height:54px;border-radius:50%;background:rgba(0,242,254,0.1);color:var(--primary);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i data-lucide="map-pin" style="width:26px;height:26px;"></i>
+          </div>
+          <h4 style="font-size:1.1rem;margin-bottom:6px;">Lokasi Kegiatan</h4>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;">TULT Telkom University</p>
+          <button class="btn btn-outline" style="width:100%;">
+            <i data-lucide="map" style="width:14px;height:14px;"></i> TULT Telkom University
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION MODAL -->
+  <div class="modal-backdrop" id="regModal">
+    <div class="glass-card modal-card">
+      <div class="modal-close" id="closeRegModal">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </div>
+
+      <h2 style="font-family:'Orbitron',sans-serif;color:var(--primary);margin-bottom:8px;">Formulir Pendaftaran Mahasiswa</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Lengkapi data tim mahasiswa untuk mendaftar Cyan Academic Competition 2026.</p>
+
+      <form id="regForm">
+        <div class="form-group">
+          <label class="form-label">Cabang Lomba</label>
+          <select class="form-select" id="regCategory" required>
+            <option value="Machine Learning Solution Challenge (EDM Lab)">Machine Learning Solution Challenge (EDM Laboratory)</option>
+            <option value="Capture The Flag (EIM Lab)">Capture The Flag / CTF (EIM Laboratory)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nama Tim</label>
+          <input type="text" class="form-input" id="regTeamName" placeholder="Contoh: Tim ML Cyber Telkom" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nama Ketua Tim (Mahasiswa)</label>
+          <input type="text" class="form-input" id="regLeaderName" placeholder="Nama Lengkap Ketua Tim" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Asal Perguruan Tinggi / Universitas (Bandung Raya)</label>
+          <input type="text" class="form-input" id="regInstitution" placeholder="Contoh: Universitas Telkom / ITB / Unpad" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Penanggung Jawab</label>
+          <input type="email" class="form-input" id="regEmail" placeholder="cyancompetition@gmail.com" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;margin-top:10px;">
+          <i data-lucide="check-circle" style="width:18px;height:18px;"></i> Submit Pendaftaran &amp; Cetak Kartu
+        </button>
+      </form>
+
+      <!-- Ticket Result -->
+      <div id="regSuccess" style="display:none;margin-top:20px;">
+        <div class="digital-ticket">
+          <div class="ticket-header">
+            <div>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--primary);">Pendaftaran Berhasil!</span>
+              <h3 style="font-family:'Orbitron',sans-serif;color:var(--text-main);" id="ticketRegId">CYAN-2026-8891</h3>
+            </div>
+            <div class="ticket-qr">
+              <i data-lucide="qr-code" style="width:70px;height:70px;color:#040914;"></i>
+            </div>
+          </div>
+          <div style="font-size:0.9rem;line-height:1.7;">
+            <p><strong>Tim:</strong> <span id="ticketTeam"></span></p>
+            <p><strong>Ketua:</strong> <span id="ticketLeader"></span></p>
+            <p><strong>Universitas:</strong> <span id="ticketInst"></span></p>
+            <p><strong>Kategori:</strong> <span id="ticketCategory"></span></p>
+          </div>
+        </div>
+
+        <button class="btn btn-outline" id="btnResetReg" style="width:100%;margin-top:16px;">
+          <i data-lucide="rotate-ccw" style="width:16px;height:16px;"></i> Daftar Tim Lain
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATUS LOOKUP MODAL -->
+  <div class="modal-backdrop" id="statusModal">
+    <div class="glass-card modal-card">
+      <div class="modal-close" id="closeStatusModal">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </div>
+
+      <h2 style="font-family:'Orbitron',sans-serif;color:var(--primary);margin-bottom:8px;">Portal Cek Status Pendaftaran</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Masukkan ID Pendaftaran Unik (misal: CYAN-2026-8891) atau Email Anda.</p>
+
+      <form id="statusForm">
+        <div class="form-group">
+          <label class="form-label">ID Pendaftaran / Email</label>
+          <input type="text" class="form-input" id="searchRegId" placeholder="CYAN-2026-XXXX atau cyancompetition@gmail.com" required />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          <i data-lucide="search" style="width:18px;height:18px;"></i> Cari Status Pendaftaran
+        </button>
+      </form>
+
+      <div id="statusResult"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER TERINTEGRASI HMSI TELKOM UNIVERSITY -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">
+            <img src="images/logo-cac.png" alt="CAC Logo" class="nav-logo-img" />
+            <div class="logo-text">
+              <span class="logo-title">CYAN ACADEMIC COMPETITION</span>
+              <span class="logo-org">HMSI TELKOM UNIVERSITY</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Cyan Academic Competition 2026 diselenggarakan oleh Departemen AKSI Himpunan Mahasiswa Sistem Informasi (HMSI) Telkom University bekerjasama dengan EDM Laboratory &amp; EIM Laboratory.
+          </p>
+          <div style="margin-top:14px;font-size:0.8rem;color:var(--primary);font-family:'JetBrains Mono',monospace;">
+            ✦ Terintegrasi dengan Ekosistem Web Resmi HMSI Telkom University
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigasi Utama</h4>
+          <div class="footer-links">
+            <a href="#home">Beranda</a>
+            <a href="#timeline">Jadwal</a>
+            <a href="#kategori">Cabang Lomba</a>
+            <a href="#guidebook">Buku Panduan</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Cabang Lomba</h4>
+          <div class="footer-links">
+            <a href="#kategori">ML Solution Challenge (EDM)</a>
+            <a href="#kategori">Capture The Flag (EIM)</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Penyelenggara</h4>
+          <div class="footer-links">
+            <a href="#contact">Departemen AKSI HMSI</a>
+            <a href="#juri">EDM Laboratory</a>
+            <a href="#juri">EIM Laboratory</a>
+            <a href="#sponsor">KB Valbury Sekuritas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Cyan Academic Competition — Himpunan Mahasiswa Sistem Informasi (HMSI) Telkom University. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
