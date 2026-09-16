@@ -114,23 +114,34 @@
 
         const teamName = document.getElementById('regTeamName').value;
         const leaderName = document.getElementById('regLeaderName').value;
+        const leaderPhone = document.getElementById('regLeaderPhone').value;
         const email = document.getElementById('regEmail').value;
         const category = document.getElementById('regCategory').value;
         const institution = document.getElementById('regInstitution').value;
 
+                // Tentukan gelombang berdasarkan tanggal submit
+        const now = new Date();
+        const batasG1 = new Date('2026-10-10T23:59:59+07:00');
+        const gelombang = now <= batasG1 ? 1 : 2;
+        const htm = gelombang === 1 ? 'Rp50.000' : 'Rp60.000';
+
         // Generate Registration ID
-        const regId = 'CYAN-2026-' + Math.floor(1000 + Math.random() * 9000);
+        const regId = 'CYAN-2026-G' + gelombang + '-' + Math.floor(1000 + Math.random() * 9000);
 
         const newRecord = {
           regId,
           teamName,
           leaderName,
+          leaderPhone,
           email,
           category,
           institution,
+          gelombang,
+          htm,
           date: new Date().toLocaleDateString('id-ID'),
-          status: 'Terverifikasi (Batch 1)'
+          status: 'Menunggu Verifikasi Pembayaran'
         };
+
 
         // Save to LocalStorage
         const existing = JSON.parse(localStorage.getItem('cyanRegistrations') || '[]');
@@ -144,7 +155,20 @@
           document.getElementById('ticketRegId').textContent = regId;
           document.getElementById('ticketTeam').textContent = teamName;
           document.getElementById('ticketLeader').textContent = leaderName;
+          document.getElementById('ticketPhone').textContent = leaderPhone;
           document.getElementById('ticketCategory').textContent = category;
+                    document.getElementById('payAmount').textContent = htm;
+          const waPesan = encodeURIComponent(
+            'Halo Panitia CAC 2026, saya ingin konfirmasi pembayaran.\n\n' +
+            'ID Pendaftaran: ' + regId + '\n' +
+            'Nama Tim: ' + teamName + '\n' +
+            'Ketua: ' + leaderName + '\n' +
+            'Cabang: ' + category + '\n' +
+            'Gelombang: ' + gelombang + ' (' + htm + ')\n\n' +
+            'Bukti transfer saya lampirkan di bawah ini.'
+          );
+          document.getElementById('payWa').href =
+            'https://wa.me/6287720499388?text=' + waPesan;
           document.getElementById('ticketInst').textContent = institution;
         }
       });
@@ -202,8 +226,10 @@
               </div>
               <p><strong>Tim:</strong> ${found.teamName}</p>
               <p><strong>Ketua:</strong> ${found.leaderName}</p>
+              <p><strong>No. Telepon:</strong> ${found.leaderPhone || '-'}</p>
               <p><strong>Universitas:</strong> ${found.institution}</p>
               <p><strong>Kategori:</strong> ${found.category}</p>
+              <p><strong>Gelombang:</strong> ${found.gelombang || '-'} · <strong>HTM:</strong> ${found.htm || '-'}</p>
             </div>
           `;
         } else {
